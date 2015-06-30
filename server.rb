@@ -2,9 +2,12 @@
 
 require 'sinatra'
 
-# get '/' do
-#   "Hello World"
-# end
+#set :root, File.dirname(__FILE__)
+
+get '/' do
+  File.read(File.join('public', 'hello.txt'))
+end
+
 
 # get '/ole' do
 #   "Ole, ole!"
@@ -13,6 +16,4 @@ require 'sinatra'
 # get '/sinatra' do
 #   "Hello, Sinatra!"
 # end
-
-
 
